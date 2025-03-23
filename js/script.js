@@ -82,27 +82,36 @@ const profileImage = document.getElementById('profile-image');
 themeButtons.forEach(button => {
     button.addEventListener('click', () => {
         const theme = button.getAttribute('data-theme');
-        document.documentElement.setAttribute('data-theme', theme);
         
-        // Change image based on theme with direct GitHub Pages URLs
+        // Create temporary image to preload
+        const tempImage = new Image();
+        let newImageSrc = '';
+        
+        // Determine new image source
         switch(theme) {
             case 'purple':
-                profileImage.src = 'https://haseeb-giit.github.io/portfolio/img1.JPG';
+                newImageSrc = 'https://haseeb-giit.github.io/portfolio/img1.JPG';
                 break;
             case 'blue':
-                profileImage.src = 'https://haseeb-giit.github.io/portfolio/img2.JPG';
+                newImageSrc = 'https://haseeb-giit.github.io/portfolio/img2.JPG';
                 break;
             case 'green':
-                profileImage.src = 'https://haseeb-giit.github.io/portfolio/img3.JPG';
+                newImageSrc = 'https://haseeb-giit.github.io/portfolio/img3.JPG';
                 break;
             case 'orange':
-                profileImage.src = 'https://haseeb-giit.github.io/portfolio/img4.jpg';
+                newImageSrc = 'https://haseeb-giit.github.io/portfolio/img4.jpg';
                 break;
         }
         
-        // Save theme preference
-        localStorage.setItem('preferred-theme', theme);
-        localStorage.setItem('profile-image', profileImage.src);
+        // Only change theme and image after new image is loaded
+        tempImage.onload = function() {
+            document.documentElement.setAttribute('data-theme', theme);
+            profileImage.src = newImageSrc;
+            localStorage.setItem('preferred-theme', theme);
+            localStorage.setItem('profile-image', newImageSrc);
+        };
+        
+        tempImage.src = newImageSrc;
     });
 });
 
