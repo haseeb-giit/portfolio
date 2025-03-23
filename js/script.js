@@ -83,11 +83,45 @@ themeButtons.forEach(button => {
     button.addEventListener('click', () => {
         const theme = button.getAttribute('data-theme');
         
-        // Create temporary image to preload
+        // Show loader with theme-colored text
+        const loaderWrapper = document.querySelector('.loader-wrapper');
+        
+        // Reset loader state first
+        loaderWrapper.classList.remove('fade-out');
+        loaderWrapper.style.display = 'flex';
+        loaderWrapper.style.flexDirection = 'column';
+        loaderWrapper.style.opacity = '1';
+        
+        // Create and add loader text
+        const loaderText = document.createElement('div');
+        loaderText.textContent = 'Applying Theme...';
+        
+        // Set text color based on theme
+        switch(theme) {
+            case 'purple':
+                loaderText.style.color = '#9c27b0';
+                break;
+            case 'blue':
+                loaderText.style.color = '#2196f3';
+                break;
+            case 'green':
+                loaderText.style.color = '#4CAF50';
+                break;
+            case 'orange':
+                loaderText.style.color = '#ff9800';
+                break;
+        }
+        
+        loaderText.style.fontSize = '1.5rem';
+        loaderText.style.marginTop = '20px';
+        loaderText.style.fontWeight = 'bold';
+        loaderWrapper.appendChild(loaderText);
+        loaderWrapper.style.display = 'flex';
+        loaderWrapper.style.flexDirection = 'column';
+        
         const tempImage = new Image();
         let newImageSrc = '';
         
-        // Determine new image source
         switch(theme) {
             case 'purple':
                 newImageSrc = 'https://haseeb-giit.github.io/portfolio/img1.JPG';
@@ -103,12 +137,21 @@ themeButtons.forEach(button => {
                 break;
         }
         
-        // Only change theme and image after new image is loaded
         tempImage.onload = function() {
             document.documentElement.setAttribute('data-theme', theme);
             profileImage.src = newImageSrc;
             localStorage.setItem('preferred-theme', theme);
             localStorage.setItem('profile-image', newImageSrc);
+            
+            // Hide loader and remove the text
+            setTimeout(() => {
+                document.querySelector('.loader-wrapper').classList.add('fade-out');
+                setTimeout(() => {
+                    document.querySelector('.loader-wrapper').style.display = 'none';
+                    document.querySelector('.loader-wrapper').classList.remove('fade-out');
+                    loaderText.remove(); // Remove the text element
+                }, 500);
+            }, 300);
         };
         
         tempImage.src = newImageSrc;
