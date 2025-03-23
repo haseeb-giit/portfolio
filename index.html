@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Haseeb Ali - Portfolio</title>
+</head>
+
+<body>
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+    <!-- HEADER SECTION -->
+    <header class="header">
+        <a href="#home" class="logo">Haseeb Ali</a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#testimonials">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+
+    <section id="home" class="home">
+        <div class="theme-buttons">
+            <button class="theme-btn" data-theme="purple" title="Purple Theme"></button>
+            <button class="theme-btn" data-theme="blue" title="Blue Theme"></button>
+            <button class="theme-btn" data-theme="green" title="Green Theme"></button>
+            <button class="theme-btn" data-theme="orange" title="Orange Theme"></button>
+        </div>
+        <div class="home-img">
+            <img src="Files/img1.jpg" alt="Profile Image" id="profile-image">
+        </div>
+        <div class="home-content">
+            <h3>Hello, I'm</h3>
+            <h1>Haseeb Ali</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <p>I am a passionate DevOps Engineer and Web Developer with experience in automation, cloud computing, and
+                AI-based technologies. With a strong background in teaching Computer Science, I love sharing knowledge
+                and building innovative solutions.</p>
+            <div class="social-media">
+                <div class="social-media">
+                    <a href="https://github.com/haseeb-giit" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="tel:+92341449801"><i class='bx bx-phone'></i></a>
+                    <a href="mailto:haseeb.giit@gmail.com"><i class='bx bx-envelope'></i></a>
+                    <a href="https://www.instagram.com/haseeb.giit?igsh=bWZ6aDJwd25ybDht" target="_blank"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://web.facebook.com/people/Haseeb-Ali/pfbid02DxneY7XyY1jf3h79tMWQqd31wMnK2g6A8nyWpQzft4xtvHTnVmpCeoS1KyNEzvbAl/" target="_blank"><i class='bx bxl-facebook'></i></a>
+                </div>
+            </div>
+            <a href="#" class="btn">Download CV</a>
+        </div>
+
+<!-- 
+        
+
+mask-image: url(&quot;https://upload-pro-heyuan-fashionphoto.oss-accelerate.aliyuncs.com/upload/original/mannequin/2025/3/22/de6115c82cc840c3aab803b71f67f13e.png&quot;); background: rgb(43, 186, 226);
+
+-->
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span> </h2>
+            <h3>I'm a <span>DevOps Engineer & Web Developer</span></h3>
+            <p>Currently working at Vega as a DevOps Engineer, I specialize in cloud infrastructure, CI/CD pipelines, and web development. 
+                My expertise extends to AI-based technologies and automation, making me a versatile professional in the tech industry. 
+                As a Computer Science Educator, I am passionate about sharing knowledge and building innovative solutions.</p>
+            <a href="#" class="btn">Read more</a>
+        </div>
+        <div class="about-img">
+            <img src="Files/1738340256814.jpg" alt="">
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2 class="heading">My <span>Services</span> </h2>
+
+        <div class="services-container">
+            <!-- Inside services-container -->
+            <div class="services-box">
+                <i class='bx bx-cloud'></i>
+                <h3>DevOps & Cloud</h3>
+                <ul>
+                    <li>CI/CD Pipeline Management</li>
+                    <li>Docker & Kubernetes</li>
+                    <li>AWS Cloud Services</li>
+                    <li>Terraform & Infrastructure as Code</li>
+                    <li>System Automation</li>
+                </ul>
+            </div>
+            
+            <div class="services-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Web Development</h3>
+                <ul>
+                    <li>Frontend: HTML, CSS, JavaScript, React</li>
+                    <li>Backend: Node.js</li>
+                    <li>Python Programming</li>
+                    <li>AI & Chatbot Development</li>
+                    <li>Responsive Design</li>
+                </ul>
+            </div>
+            
+            <div class="services-box">
+                <i class='bx bx-chalkboard'></i>
+                <h3>Education & Training</h3>
+                <ul>
+                    <li>Computer Science Teaching</li>
+                    <li>Technical Content Creation</li>
+                    <li>Programming Workshops</li>
+                    <li>Student Mentoring</li>
+                    <li>Course Development</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section (Previously Testimonials) -->
+        <section id="testimonials" class="testimonials">
+            <div class="testimonials-box">
+                <h2 class="heading">My <span>Projects</span></h2>
+
+                <div class="wrapper">
+                    <div class="testimonial-item">
+                        <img src="Files/resume.png" alt="CV Maker Project">
+                        <h2>CV Maker Tool</h2>
+                        <p>A professional CV generator with modern templates, allowing users to create and download their resumes instantly without MS Word.</p>
+                        <a href="https://your-cv-maker-link.com" class="btn" target="_blank">Visit Project</a>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <img src="Files/snake.jpg" alt="Snake Game">
+                        <h2>Snake Game</h2>
+                        <p>Classic Snake game built with JavaScript, featuring multiple difficulty levels and score tracking system.</p>
+                        <a href="https://your-snake-game-link.com" class="btn" target="_blank">Visit Project</a>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <img src="Files/tic tac teo.jpg" alt="Tic Tac Toe">
+                        <h2>Tic Tac Toe</h2>
+                        <p>Interactive Tic Tac Toe game with AI opponent and multiplayer options.</p>
+                        <a href="https://your-tictactoe-link.com" class="btn" target="_blank">Visit Project</a>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <img src="Files/eductional.png" alt="Educational Website">
+                        <h2>Educational Website</h2>
+                        <p>Complete learning management system with course tracking, assignments, and progress monitoring.</p>
+                        <a href="https://your-edu-website-link.com" class="btn" target="_blank">Visit Project</a>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <img src="Files/binar.jpg" alt="Binary Text Converter">
+                        <h2>Binary Text Converter</h2>
+                        <p>Tool for converting text to binary and vice versa, with additional encoding options.</p>
+                        <a href="https://your-binary-converter-link.com" class="btn" target="_blank">Visit Project</a>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <img src="Files/e-commerce.png" alt="Ecommerce Website">
+                        <h2>Ecommerce Website</h2>
+                        <p>Full-featured online store with shopping cart, payment integration, and order management.</p>
+                        <a href="https://your-ecommerce-link.com" class="btn" target="_blank">Visit Project</a>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <img src="Files/youtube.png" alt="Youtube Clone">
+                        <h2>Youtube Clone</h2>
+                        <p>Video sharing platform with similar features to YouTube, including video upload and playback.</p>
+                        <a href="https://your-youtube-clone-link.com" class="btn" target="_blank">Visit Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Contact Section -->
+
+    <section id="contact" class="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <p style="text-align: center; font-size: 1.6rem; margin-bottom: 2rem;">Let's connect! Feel free to reach out for
+            collaborations or opportunities.</p>
+
+        <form action="#">
+            <div class="input-box">
+                <input type="text" name="name" placeholder="Full Name">
+                <input type="email" name="email" placeholder="Email Address">
+            </div>
+            <div class="input-box">
+                <input type="number" name="number" placeholder="Phone Number">
+                <input type="text" name="subject" placeholder="Email Subject">
+            </div>
+
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Haseeb Ali</h3>
+                <p>DevOps Engineer</p>
+                <p>Web Developer</p>
+                <p>Python Developer</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Projects</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li>DevOps & Cloud</li>
+                    <li>Web Development</li>
+                    <li>Technical Training</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Portfolio | All Rights Reserved</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
