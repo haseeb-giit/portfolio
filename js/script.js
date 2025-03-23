@@ -87,16 +87,16 @@ themeButtons.forEach(button => {
         // Change image based on theme with error handling
         switch(theme) {
             case 'purple':
-                profileImage.src = 'https://haseeb-giit.github.io/portfolio/Files/img1.jpg';
+                profileImage.src = 'Files/img1.g';
                 break;
             case 'blue':
-                profileImage.src = './Files/img1.jpg';
+                profileImage.src = 'Files/img2.jpg';
                 break;
             case 'green':
-                profileImage.src = './Files/img1.jpg';
+                profileImage.src = 'Files/img3.jpg';
                 break;
             case 'orange':
-                profileImage.src = './Files/img1.jpg';
+                profileImage.src = 'Files/img4.jpg';
                 break;
         }
         
