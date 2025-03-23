@@ -48,15 +48,31 @@ function reveal() {
 
 // Trigger animation for home section elements immediately on page load
 // Add at the beginning of your script.js
+// Wait for all images to load before hiding the loader
 window.addEventListener('load', () => {
-    // Hide loader after page is fully loaded
-    setTimeout(() => {
-        document.querySelector('.loader-wrapper').classList.add('fade-out');
-    }, 1500);  // Wait for 1.5 seconds before hiding
+    const images = document.querySelectorAll('img');
+    let loadedImages = 0;
 
-    // Your existing load event code
-    document.querySelector('.home-content').classList.add('active');
-    document.querySelector('.home-img').classList.add('active');
+    function imageLoaded() {
+        loadedImages++;
+        if (loadedImages === images.length) {
+            // All images have loaded, hide the loader
+            document.querySelector('.loader-wrapper').classList.add('fade-out');
+            setTimeout(() => {
+                document.querySelector('.loader-wrapper').style.display = 'none';
+            }, 500);
+        }
+    }
+
+    // Check each image
+    images.forEach(img => {
+        if (img.complete) {
+            imageLoaded();
+        } else {
+            img.addEventListener('load', imageLoaded);
+            img.addEventListener('error', imageLoaded); // Handle error cases too
+        }
+    });
 });
 
 // Theme switching functionality
