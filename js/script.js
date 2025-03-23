@@ -84,19 +84,19 @@ themeButtons.forEach(button => {
         const theme = button.getAttribute('data-theme');
         document.documentElement.setAttribute('data-theme', theme);
         
-        // Change image based on theme
+        // Change image based on theme with direct GitHub Pages URLs
         switch(theme) {
             case 'purple':
-                profileImage.src = 'Files/img1.jpg';
+                profileImage.src = 'https://haseeb-giit.github.io/portfolio/img1.JPG';
                 break;
             case 'blue':
-                profileImage.src = 'Files/img2.jpg';
+                profileImage.src = 'https://haseeb-giit.github.io/portfolio/img2.JPG';
                 break;
             case 'green':
-                profileImage.src = 'Files/img3.jpg';
+                profileImage.src = 'https://haseeb-giit.github.io/portfolio/img3.JPG';
                 break;
             case 'orange':
-                profileImage.src = 'Files/img4.jpg';
+                profileImage.src = 'https://haseeb-giit.github.io/portfolio/img4.jpg';
                 break;
         }
         
