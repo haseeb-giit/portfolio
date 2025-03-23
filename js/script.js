@@ -84,10 +84,10 @@ themeButtons.forEach(button => {
         const theme = button.getAttribute('data-theme');
         document.documentElement.setAttribute('data-theme', theme);
         
-        // Change image based on theme with error handling
+        // Change image based on theme
         switch(theme) {
             case 'purple':
-                profileImage.src = 'Files/img1.g';
+                profileImage.src = 'Files/img1.jpg';
                 break;
             case 'blue':
                 profileImage.src = 'Files/img2.jpg';
@@ -99,11 +99,6 @@ themeButtons.forEach(button => {
                 profileImage.src = 'Files/img4.jpg';
                 break;
         }
-        
-        // Add error handling for image loading
-        profileImage.onerror = function() {
-            profileImage.src = './Files/img1.jpg'; // Fallback to default image
-        };
         
         // Save theme preference
         localStorage.setItem('preferred-theme', theme);
